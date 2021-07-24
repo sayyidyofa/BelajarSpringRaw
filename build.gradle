@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'xyz.yoffa'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation 'org.springframework:spring:5.3.9'
+    implementation 'org.springframework:spring-context:5.3.9'
+}
+
+test {
+    useJUnitPlatform()
+}
