@@ -8,6 +8,14 @@
 	   		http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean
+            id="globalLoggerConfig"
+            class="xyz.yoffa.BelajarSpringRaw.logging.GlobalLoggingConfig"
+            init-method="initLogger">
+        <property name="rootLoggerLevel" value="FINE"/>
+        <property name="printedLoggerLevel" value="FINE"/>
+    </bean>
+
+    <bean
             id="myCoach"
             class="xyz.yoffa.BelajarSpringRaw.TrackCoach"
     >
