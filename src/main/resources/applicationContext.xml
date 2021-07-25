@@ -17,7 +17,7 @@
 
     <bean
             id="myCoach"
-            class="xyz.yoffa.BelajarSpringRaw.SoccerCoach"
+            class="xyz.yoffa.BelajarSpringRaw.coach.SoccerCoach"
     >
 
     </bean>

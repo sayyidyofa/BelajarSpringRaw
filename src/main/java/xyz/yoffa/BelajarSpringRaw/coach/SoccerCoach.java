@@ -1,4 +1,4 @@
-package xyz.yoffa.BelajarSpringRaw;
+package xyz.yoffa.BelajarSpringRaw.coach;
 
 public class SoccerCoach implements Coach{
     @Override

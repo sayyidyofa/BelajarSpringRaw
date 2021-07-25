@@ -1,7 +1,7 @@
 package xyz.yoffa.BelajarSpringRaw;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import xyz.yoffa.BelajarSpringRaw.coach.Coach;
 
 public class Application {
     public static void main(String[] args) {
