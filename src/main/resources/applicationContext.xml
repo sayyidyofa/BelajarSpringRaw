@@ -26,5 +26,7 @@
     <bean id="belalang"
           class="xyz.yoffa.BelajarSpringRaw.coach.CricketCoach">
         <property name="fortuneService" ref="leFortuneService"/>
+        <property name="emailAddress" value="yoffa@gmail.com"/>
+        <property name="team" value="Semen Padang"/>
     </bean>
 </beans>
