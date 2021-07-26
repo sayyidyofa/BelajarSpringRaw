@@ -14,6 +14,9 @@
         <property name="printedLoggerLevel" value="FINE"/>
     </bean>
 
+    <!-- load properties file sport.properties -->
+    <context:property-placeholder location="classpath:sport.properties"/>
+
     <bean id="leFortuneService"
           class="xyz.yoffa.BelajarSpringRaw.fortune.HappyFortuneService">
     </bean>
@@ -26,7 +29,7 @@
     <bean id="belalang"
           class="xyz.yoffa.BelajarSpringRaw.coach.CricketCoach">
         <property name="fortuneService" ref="leFortuneService"/>
-        <property name="emailAddress" value="yoffa@gmail.com"/>
-        <property name="team" value="Semen Padang"/>
+        <property name="emailAddress" value="${foo.email}"/>
+        <property name="team" value="${foo.team}"/>
     </bean>
 </beans>
