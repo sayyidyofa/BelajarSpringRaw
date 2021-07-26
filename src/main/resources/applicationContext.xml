@@ -28,8 +28,16 @@
 
     <bean id="belalang"
           class="xyz.yoffa.BelajarSpringRaw.coach.CricketCoach">
-        <property name="fortuneService" ref="leFortuneService"/>
+        <property name="fortuneService" ref="gachaService"/>
         <property name="emailAddress" value="${foo.email}"/>
         <property name="team" value="${foo.team}"/>
+    </bean>
+
+    <!-- make new random service from java utils -->
+    <bean id="randomService" class="java.util.Random"/>
+
+    <bean id="gachaService"
+          class="xyz.yoffa.BelajarSpringRaw.fortune.GachaFortuneService">
+        <property name="myGacha" ref="randomService"/>
     </bean>
 </beans>
