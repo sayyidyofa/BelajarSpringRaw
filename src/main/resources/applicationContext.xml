@@ -7,19 +7,20 @@
 	   		http://www.springframework.org/schema/context
 	   		http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean
-            id="globalLoggerConfig"
-            class="xyz.yoffa.BelajarSpringRaw.logging.GlobalLoggingConfig"
-            init-method="initLogger">
+    <bean id="globalLoggerConfig"
+          class="xyz.yoffa.BelajarSpringRaw.logging.GlobalLoggingConfig"
+          init-method="initLogger">
         <property name="rootLoggerLevel" value="FINE"/>
         <property name="printedLoggerLevel" value="FINE"/>
     </bean>
 
-    <bean
-            id="myCoach"
-            class="xyz.yoffa.BelajarSpringRaw.coach.SoccerCoach"
-    >
+    <bean id="leFortuneService"
+          class="xyz.yoffa.BelajarSpringRaw.fortune.HappyFortuneService">
+    </bean>
 
+    <bean id="myCoach"
+          class="xyz.yoffa.BelajarSpringRaw.coach.BaseballCoach">
+        <constructor-arg ref="leFortuneService"/>
     </bean>
 
 </beans>

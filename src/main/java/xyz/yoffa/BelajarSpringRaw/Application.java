@@ -15,6 +15,8 @@ public class Application {
         // call methods on the bean
         System.out.println(leCoach.getDailyWorkout());
 
+        System.out.println(leCoach.getDailyFortune());
+
         // close the context
         context.close();
     }
