@@ -23,4 +23,8 @@
         <constructor-arg ref="leFortuneService"/>
     </bean>
 
+    <bean id="belalang"
+          class="xyz.yoffa.BelajarSpringRaw.coach.CricketCoach">
+        <property name="fortuneService" ref="leFortuneService"/>
+    </bean>
 </beans>
