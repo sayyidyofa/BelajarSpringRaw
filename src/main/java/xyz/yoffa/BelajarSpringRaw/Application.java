@@ -6,17 +6,15 @@ import xyz.yoffa.BelajarSpringRaw.coach.CricketCoach;
 import xyz.yoffa.BelajarSpringRaw.coach.SoccerCoach;
 import xyz.yoffa.BelajarSpringRaw.teh.Teh;
 
+import java.lang.annotation.Annotation;
+
 public class Application {
     public static void main(String[] args) {
 
         // load the app context
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beanScopeContext.xml");
 
-        // retrieve the bean from container
-
-        Coach baseballCoach = context.getBean("myCoach", Coach.class);
-
-        System.out.println(baseballCoach.getDailyFortune());
+        System.out.println("Soccer coach bean's scope is: " + context.getBeanFactory().getBeanDefinition("soccerCoach").getScope());
 
         // close the context
         context.close();

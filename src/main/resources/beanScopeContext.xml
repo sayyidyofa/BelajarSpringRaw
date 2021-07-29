@@ -17,4 +17,8 @@
           scope="prototype">
         <constructor-arg ref="leFortuneService"/>
     </bean>
+
+    <bean id="soccerCoach" class="xyz.yoffa.BelajarSpringRaw.coach.SoccerCoach" scope="prototype">
+        <constructor-arg ref="leFortuneService"/>
+    </bean>
 </beans>
