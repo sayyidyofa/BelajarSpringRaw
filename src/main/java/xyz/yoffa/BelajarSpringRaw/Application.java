@@ -10,13 +10,13 @@ public class Application {
     public static void main(String[] args) {
 
         // load the app context
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("goodbyeXmlContext.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beanScopeContext.xml");
 
         // retrieve the bean from container
 
-        Teh tehCelupku = context.getBean("tehCelup", Teh.class);
+        Coach baseballCoach = context.getBean("myCoach", Coach.class);
 
-        System.out.println("Cara penyajian teh: " + tehCelupku.penyajian());
+        System.out.println(baseballCoach.getDailyFortune());
 
         // close the context
         context.close();
