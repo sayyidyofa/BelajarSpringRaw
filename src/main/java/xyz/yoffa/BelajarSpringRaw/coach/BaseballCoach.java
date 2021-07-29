@@ -1,8 +1,9 @@
 package xyz.yoffa.BelajarSpringRaw.coach;
 
+import org.springframework.beans.factory.DisposableBean;
 import xyz.yoffa.BelajarSpringRaw.fortune.FortuneService;
 
-public class BaseballCoach implements Coach{
+public class BaseballCoach implements Coach, DisposableBean {
 
     private final FortuneService fortuneService;
 
@@ -18,5 +19,10 @@ public class BaseballCoach implements Coach{
     @Override
     public String getDailyFortune() {
         return fortuneService.getFortune();
+    }
+
+    @Override
+    public void destroy() {
+        System.out.println("Destroying " + this);
     }
 }
