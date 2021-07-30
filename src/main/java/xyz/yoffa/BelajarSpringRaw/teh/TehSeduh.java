@@ -1,6 +1,7 @@
 package xyz.yoffa.BelajarSpringRaw.teh;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import xyz.yoffa.BelajarSpringRaw.fortune.FortuneService;
 import xyz.yoffa.BelajarSpringRaw.sweetener.Sweetener;
@@ -9,6 +10,7 @@ import xyz.yoffa.BelajarSpringRaw.sweetener.Sweetener;
 public class TehSeduh implements Teh{
 
     @Autowired
+    @Qualifier("sugarCane")
     private Sweetener sweetener;
 
     @Override
