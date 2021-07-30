@@ -9,9 +9,12 @@ import xyz.yoffa.BelajarSpringRaw.sweetener.Sweetener;
 @Component
 public class TehSeduh implements Teh{
 
-    @Autowired
-    @Qualifier("sugarCane")
     private Sweetener sweetener;
+
+    // @Autowire is not required for constructors since Spring 4.3
+    public TehSeduh(@Qualifier("sugarCane") Sweetener sweetener) {
+        this.sweetener = sweetener;
+    }
 
     @Override
     public String penyajian() {
