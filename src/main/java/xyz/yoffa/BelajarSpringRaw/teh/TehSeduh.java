@@ -11,7 +11,7 @@ public class TehSeduh implements Teh{
     private Sweetener sweetener;
 
     @Autowired
-    public void setSweetener(Sweetener sweetener) {
+    public void customMethodName(Sweetener sweetener) {
         this.sweetener = sweetener;
     }
 
