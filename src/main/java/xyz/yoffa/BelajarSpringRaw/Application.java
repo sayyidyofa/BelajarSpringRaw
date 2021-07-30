@@ -1,9 +1,6 @@
 package xyz.yoffa.BelajarSpringRaw;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import xyz.yoffa.BelajarSpringRaw.coach.Coach;
-import xyz.yoffa.BelajarSpringRaw.coach.CricketCoach;
-import xyz.yoffa.BelajarSpringRaw.coach.SoccerCoach;
 import xyz.yoffa.BelajarSpringRaw.teh.Teh;
 
 import java.lang.annotation.Annotation;

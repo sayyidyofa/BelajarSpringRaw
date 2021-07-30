@@ -8,10 +8,10 @@ import xyz.yoffa.BelajarSpringRaw.sweetener.Sweetener;
 @Component
 public class TehSeduh implements Teh{
 
-    private final Sweetener sweetener;
+    private Sweetener sweetener;
 
     @Autowired
-    public TehSeduh(Sweetener sweetener) {
+    public void setSweetener(Sweetener sweetener) {
         this.sweetener = sweetener;
     }
 
