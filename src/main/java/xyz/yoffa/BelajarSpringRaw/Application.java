@@ -12,9 +12,11 @@ public class Application {
     public static void main(String[] args) {
 
         // load the app context
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beanScopeContext.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("goodbyeXmlContext.xml");
 
-        System.out.println("Soccer coach bean's scope is: " + context.getBeanFactory().getBeanDefinition("soccerCoach").getScope());
+        Teh leTeh = context.getBean("tehSeduh", Teh.class);
+
+        System.out.println("Kalori 1 leTeh adalah: " + leTeh.getCalories());
 
         // close the context
         context.close();

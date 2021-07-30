@@ -8,4 +8,10 @@ public class TehCelup implements Teh{
     public String penyajian() {
         return "Dijilat, diputar, dicelupin";
     }
+
+    @Override
+    public int getCalories() {
+        return 0;
+    }
+
 }
