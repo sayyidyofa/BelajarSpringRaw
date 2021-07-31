@@ -2,6 +2,7 @@ package xyz.yoffa.BelajarSpringRaw.teh;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import xyz.yoffa.BelajarSpringRaw.fortune.FortuneService;
 import xyz.yoffa.BelajarSpringRaw.sweetener.Sweetener;
@@ -10,6 +11,9 @@ import xyz.yoffa.BelajarSpringRaw.sweetener.Sweetener;
 public class TehSeduh implements Teh{
 
     private Sweetener sweetener;
+
+    @Value("${teh.merk}")
+    public String merk;
 
     // @Autowire is not required for constructors since Spring 4.3
     public TehSeduh(@Qualifier("sugarCane") Sweetener sweetener) {
