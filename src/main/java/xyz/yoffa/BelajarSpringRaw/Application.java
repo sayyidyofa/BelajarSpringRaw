@@ -14,9 +14,9 @@ public class Application {
         // load the app context
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("goodbyeXmlContext.xml");
 
-        TehSeduh leTeh = context.getBean("tehSeduh", TehSeduh.class);
+        Teh leTeh = context.getBean("tehCelup", Teh.class);
 
-        System.out.println("Merk leTeh: " + leTeh.merk);
+        System.out.println("Cara Penyajian leTeh: " + leTeh.penyajian());
 
         // close the context
         context.close();
